@@ -17,7 +17,7 @@ int main()
 		for(int i=0;i<26;i++)
 			alphabet[i]=0;
 	
-	for(int i=0;i<strlen(line);i++)
+		for(int i=0;i<strlen(line);i++)
 		{
 			if(line[i]=='-')
 				continue;
