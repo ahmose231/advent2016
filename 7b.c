@@ -13,25 +13,23 @@ int outer_i;
 int total=0;
 
 void process()
-{    
+{
     int len, len2;
     char a,b;
     for(int i=0;i<outer_i;i++)
     {
         len=strlen(outer[i]);
         for(int j=0;j<len-2;j++)
-        {
             if(outer[i][j]==outer[i][j+2])
             {
                 a=outer[i][j];
                 b=outer[i][j+1];
                 
                 if(a!=b)
-                {
                     for(int m=0;m<inner_i;m++)
                     {
                         len2=strlen(inner[m]);
-                        for(int n=0;n<len-2;n++)
+                        for(int n=0;n<len2-2;n++)
                         {
                             if(inner[m][n]==b)
                                 if(inner[m][n+2]==b)
@@ -42,9 +40,7 @@ void process()
                                     }
                         }
                     }
-                }
             }
-        }
     }
     
     return;
